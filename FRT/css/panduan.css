@@ -1,0 +1,132 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+a:hover{
+	text-decoration: none;
+}
+.header{
+	height: 36px;
+	background-color: #ebebeb;
+	color: black;
+}
+.header img{
+	height: 40px;
+	margin-left: 200px;
+}
+.header input{
+	margin-left: 45px;
+	width: 200px;
+	height: 26px;
+	margin-top: 9px;
+}
+.btn-search{
+	display: block;
+	margin-top: -40px;
+	height: 40px;
+	width: 40px;
+	margin-left: 300px;
+}
+
+.nav{
+	/*background-color: #323232;*/
+	font-size: 20px;
+}
+#nav li{
+	list-style: none;
+	float: left;
+	padding-right:10px;	
+	}
+#nav a{
+	color: black;
+}
+.content{
+	background-color: #ebebeb;
+}
+/*题目部分*/
+.body1{
+	background-color: white;
+	border-radius: 5px;
+	font-size: 20px;
+}
+.body1 h4{
+	width: 400px;
+	padding-top: 20px;
+}
+.body1 p{
+	margin-left: 30px;
+	margin-top: 20px;
+}
+.imgarea{
+	overflow: hidden;
+	text-align: left;
+	margin-left: 5%;
+}
+.imgarea img{
+	max-height: 200px;
+	max-width: 400px;
+}
+.body1 button{
+	width: 60px;
+	height: 40px;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+.btn1{
+	margin-top: -7.5%;
+	margin-left: 50%;
+	padding-bottom: 2%;
+	
+}
+.btn1 button{
+	margin-left: 10px;
+	width: 60px;
+	height: 40px;
+	
+	font-size: 5px;
+}
+/*content1部分*/
+.content1{
+	background-color: #ebebeb;
+}
+.body2{
+	background-color: white;
+	height: 240px;
+	border-radius: 5px;
+	text-align: left;
+}
+.body2 h1{
+	margin-top: 20px;
+	margin-left: 30px;
+	color: red;
+	
+}
+.body2 b{
+	margin-top: 10px;
+	margin-left: 150px;
+	font-size: 40px;
+}
+.body2 p{
+	margin-top: 10px;
+	margin-left: 70px;
+	font-size: 15px;
+}
+/*footer样式*/
+.footer{
+	background-color: #ebebeb;
+}
+.footer p{
+	padding: 50px 0px;
+	text-align: center;
+	font-size: 15px;
+	color:black;
+}
+body{
+	overflow:-Scroll;overflow-x:hidden;
+	width:1366px;
+}
+.rightandfalse{
+	padding-bottom: 2%;
+	margin-left: -5%;
+	margin-top:-5% ;
+}
