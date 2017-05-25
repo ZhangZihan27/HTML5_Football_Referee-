@@ -1,0 +1,101 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+a:hover{
+	text-decoration: none;
+}
+/*header样式*/
+.header{
+	padding: 10px;
+	height: 40px;
+	text-align: center;
+	background-color: #ebebeb;
+	color: black;
+}
+.header a{
+	font-size:12px/1.14;
+	font-family: arial;
+	color: black;
+}
+.myClass {
+	padding-right: 0px;
+}
+.login{
+	padding-left:0px;
+	
+}
+.header a:hover{
+	color:red;
+};
+
+
+/*logo样式*/
+.logo{
+	height: 100px;
+}
+.logo img{
+	padding-top: 10px;	
+}
+.logo p{
+	font-size: 30px;
+	padding-top: 20px;
+}
+/*search样式*/
+.search{
+	height: 100px;
+	padding-top: 20px;
+	display: inline;
+}
+#input{
+	height: 40px;
+	border-color: green;
+	width: 80%;
+}
+
+/*nav样式*/
+.nav{
+	background-color: #323232;
+	font-size: 25px;
+}
+#nav li{
+	list-style: none;
+	float: left;
+	padding-right:50px;	
+	}
+#nav a{
+	color: white;
+}
+#nav a:hover{
+	color:yellow;
+	font-size: 28px;
+};
+#nav-index{
+	margin-left: 150px;
+}
+
+/*幻灯片样式*/
+.carousel{
+width: 101.1%;
+}
+
+/*内容样式*/
+.content{
+
+}
+.content h1{
+	text-align: center;
+	color: orange;
+
+}
+
+/*footer样式*/
+.footer{
+	background-color: #ebebeb;
+}
+.footer p{
+	padding: 50px 0px;
+	text-align: center;
+	font-size: 15px;
+	color:black;
+}
