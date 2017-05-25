@@ -49,31 +49,19 @@ a:hover{
 	border-radius: 5px;
 	font-size: 20px;
 }
-.body1 h4{
-	width: 400px;
-	padding-top: 20px;
+h4{
+	text-align: left;
 }
 .body1 p{
 	margin-left: 30px;
 	margin-top: 20px;
 }
-<<<<<<< HEAD
-.body1 img{
-	display: block;
-	margin-left: 420px;
-	margin-top: -70px;
-	width: 200px;
-	height: 120px;
-=======
 .imgarea{
 	overflow: hidden;
-	text-align: left;
-	margin-left: 5%;
 }
 .imgarea img{
 	max-height: 200px;
 	max-width: 400px;
->>>>>>> origin/master
 }
 .body1 button{
 	width: 60px;
@@ -82,25 +70,14 @@ a:hover{
 	margin-top: 20px;
 }
 .btn1{
-<<<<<<< HEAD
-	margin-top: -60px;
-	margin-left: 400px;
-=======
-	margin-top: -7.5%;
-	margin-left: 50%;
-	padding-bottom: 2%;
-	
->>>>>>> origin/master
+	margin-right: 20%;
+	margin-top: 45%;
 }
 .btn1 button{
 	margin-left: 10px;
 	width: 60px;
 	height: 40px;
-<<<<<<< HEAD
 	margin-bottom: 10px;
-=======
-	
->>>>>>> origin/master
 	font-size: 5px;
 }
 /*content1部分*/
@@ -111,27 +88,17 @@ a:hover{
 	background-color: white;
 	height: 240px;
 	border-radius: 5px;
-<<<<<<< HEAD
-=======
 	text-align: left;
->>>>>>> origin/master
 }
 .body2 h1{
 	margin-top: 20px;
 	margin-left: 30px;
 	color: red;
-<<<<<<< HEAD
-}
-.body2 b{
-	margin-top: 10px;
-	margin-left: 400px;
-=======
 	
 }
 .body2 b{
 	margin-top: 10px;
 	margin-left: 150px;
->>>>>>> origin/master
 	font-size: 40px;
 }
 .body2 p{
@@ -152,13 +119,14 @@ a:hover{
 body{
 	overflow:-Scroll;overflow-x:hidden;
 	width:1366px;
-<<<<<<< HEAD
-}
-=======
 }
 .rightandfalse{
-	padding-bottom: 2%;
-	margin-left: -5%;
-	margin-top:-5% ;
+	
+	margin-top:75% ;
+	font-size: 22px;
 }
->>>>>>> origin/master
+.rightandfalse button{
+	width: 80px;
+	height: 50px;
+	margin-left: 15px;
+}

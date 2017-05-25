@@ -73,11 +73,11 @@ a:hover{
 	margin-left: 165px;
 }
 .btn1{
-	margin-top: -30px;
-	margin-left: 400px;
+	margin-right: 20%;
+	margin-top: 35%;
 }
 .btn1 button{
-	margin:0 auto;
+	margin-left: 10px;
 	width: 60px;
 	height: 40px;
 	margin-bottom: 10px;
@@ -119,17 +119,27 @@ a:hover{
 	font-size: 15px;
 	color:black;
 }
+.textarea{
+	margin-top: 12%;
+	width: 200px;
+	height: 200px;
+}
 .test1{
 	position:absolute;
 	top: 250px;
 	left: -18%;
 }
-.text1{
-	position: relative;
-	left: -8%;
-	top: 2px;
-}
 body{
 	overflow:-Scroll;overflow-x:hidden;
 	width:1366px;
+}
+.imgarea{
+	overflow: hidden;
+}
+.imgarea img{
+	max-height: 200px;
+	max-width: 400px;
+}
+.body2 p{
+	font-size: 20px;
 }
