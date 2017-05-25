@@ -12,9 +12,148 @@
 			$.get(url,function(data,status){
 			 console.log(data);
 			 $("tbody").append(data);
-			 });			
+			 var theTable = document.getElementById("tablelsw");     
+var totalPage = document.getElementById("spanTotalPage");     
+var pageNum = document.getElementById("spanPageNum");     
+//上一页    
+var spanPre = document.getElementById("spanPre"); 
+//下一页    
+var spanNext = document.getElementById("spanNext");     
+var spanFirst = document.getElementById("spanFirst");     
+var spanLast = document.getElementById("spanLast");     
+  
+    //行
+var numberRowsInTable = theTable.rows.length;     
+var pageSize = 4;     
+var page = 1;     
+   console.log(numberRowsInTable);
+//下一页     
+function next(){     
+    
+    hideTable();     
+         
+    currentRow = pageSize * page;  
+    //当前页加一页 判断是否是最后一页   
+    maxRow = currentRow + pageSize;     
+    if ( maxRow > numberRowsInTable ) maxRow = numberRowsInTable;     
+    for ( var i = currentRow; i< maxRow; i++ ){     
+        theTable.rows[i].style.display = '';     
+    }     
+    page++;     
+    //是最后一页     
+    if ( maxRow == numberRowsInTable ) { nextText(); lastText(); }     
+    showPage();     
+    preLink();     
+    firstLink();     
+}     
+    
+//上一页     
+function pre(){     
+    
+    hideTable();     
+         
+    page--;     
+         
+    currentRow = pageSize * page;     
+    maxRow = currentRow - pageSize;     
+    if ( currentRow > numberRowsInTable ) currentRow = numberRowsInTable;     
+    for ( var i = maxRow; i< currentRow; i++ ){     
+        theTable.rows[i].style.display = '';     
+    }     
+         
+         
+    if ( maxRow == 0 ){ preText(); firstText(); }     
+    showPage();     
+    nextLink();     
+    lastLink();     
+}     
+    
+//第一页     
+function first(){     
+    hideTable();     
+    page = 1;     
+    for ( var i = 0; i<pageSize; i++ ){     
+        theTable.rows[i].style.display = '';     
+    }     
+    showPage();     
+         
+    preText();     
+    nextLink();     
+    lastLink();     
+}     
+    
+//最后一页     
+function last(){     
+    hideTable();     
+    page = pageCount();     
+    currentRow = pageSize * (page - 1);     
+    for ( var i = currentRow; i<numberRowsInTable; i++ ){     
+        theTable.rows[i].style.display = '';     
+    }     
+    showPage();     
+         
+    preLink();     
+    nextText();     
+    firstLink();     
+}     
+    
+function hideTable(){     
+    for ( var i = 0; i<numberRowsInTable; i++ ){     
+        theTable.rows[i].style.display = 'none';     
+    }     
+}     
+    
+function showPage(){     
+    pageNum.innerHTML = page;     
+    
+}     
+    
+//总共页数     
+function pageCount(){     
+    var count = 0;     
+    if ( numberRowsInTable%pageSize != 0 ) count = 1;      
+    return parseInt(numberRowsInTable/pageSize) + count;     
+}     
+    
+//显示链接     
+function preLink(){ spanPre.innerHTML = "<a href='####' onclick='pre()'>上一页</a>"; }     
+function preText(){ spanPre.innerHTML = "上一页"; }     
+    
+function nextLink(){ spanNext.innerHTML = "<a href='####' onclick='next()'>下一页</a>"; }     
+function nextText(){ spanNext.innerHTML = "下一页"; }     
+    
+function firstLink(){ spanFirst.innerHTML = "<a href='####' onclick='first()'>第一页</a>"; }     
+function firstText(){ spanFirst.innerHTML = "第一页";}     
+    
+function lastLink(){ spanLast.innerHTML = "<a href='####' onclick='last()'>最后一页</a>"; }     
+function lastText(){ spanLast.innerHTML = "最后一页"; }      
+    
+//隐藏表格     
+function hide(){     
+    for ( var i = pageSize; i<numberRowsInTable; i++ ){     
+        theTable.rows[i].style.display = 'none';     
+    }     
+         
+    totalPage.innerHTML = pageCount();     
+    pageNum.innerHTML = '1';     
+         
+         
+    if(pageCount()==1) {
+                        nextText();
+                        lastText();
+                    } else{
+                        nextLink();     
+                        lastLink();    
+                    }     
+}     
+    
+hide();
+			 });
+
+
         }
 	</script>
+
 </head>
 <body>
 	<div class="wrapper">
@@ -26,7 +165,6 @@
 			<div class="top-right">
 				<ul>
 					<li><a href="login.html">登录</a></li>
-					<li><a href="register.html">注册</a></li>
 					<li><a href="#">退出</a></li>
 				</ul>
 			</div>
@@ -34,7 +172,7 @@
 		<!--head-->
 		<div class="head">
 			<div class="shouye">
-				<a href="index.html"><img src="images/home.png" alt="" width="22px" height="22px">首页</a>
+				<a href="admin_index.html"><img src="images/home.png" alt="" width="22px" height="22px">首页</a>
 			</div>
 			<div class="head-title">
 				<h3>足球裁判教学后台管理系统</h3>				
@@ -143,7 +281,7 @@
 					</div>
 					<!--adminList-->
 					<div class="col-md-12">
-						<table class="table table-striped table-hover">
+						<table class="table table-striped table-hover" >
 							<thead>
 								<tr>
 									<th>管理员</th>
@@ -153,92 +291,30 @@
 									<th>操作</th>
 								</tr>
 							</thead>
-							<tbody>
-								<!-- <tr>
-									<td>zhangsan</td>
-									<td>张三</td>
-									<td>123456</td>
-									<td>2016-11-8</td>
-									<td>
-										<a href="" >修改</a>
-										<a href="" id="del">删除</a>
-									</td>
-								</tr>
-								<tr>
-									<td>zhangsan</td>
-									<td>张三</td>
-									<td>123456</td>
-									<td>2016-11-8</td>
-									<td>
-										<a href="" >修改</a>
-										<a href="" >删除</a>
-									</td>
-								</tr>
-								<tr>
-									<td>zhangsan</td>
-									<td>张三</td>
-									<td>123456</td>
-									<td>2016-11-8</td>
-									<td>
-										<a href="" >修改</a>
-										<a href="" >删除</a>
-									</td>
-								</tr>
-								<tr>
-									<td>zhangsan</td>
-									<td>张三</td>
-									<td>123456</td>
-									<td>2016-11-8</td>
-									<td>
-										<a href="" >修改</a>
-										<a href="" >删除</a>
-									</td>
-								</tr>
-								<tr>
-									<td>zhangsan</td>
-									<td>张三</td>
-									<td>123456</td>
-									<td>2016-11-8</td>
-									<td>
-										<a href="" >修改</a>
-										<a href="" >删除</a>
-									</td>
-								</tr> -->
+							<tbody id="tablelsw">
+								
 							</tbody>
 						</table>
 						<!--pagination-->
 						<div class="col-md-4 col-md-offset-8 page">
-							<ul class="pagination">
-								<li>
-									 <a href="#"><<</a>
-								</li>
-								<li>
-									 <a href="#">1</a>
-								</li>
-								<li>
-									 <a href="#">2</a>
-								</li>
-								<li>
-									 <a href="#">3</a>
-								</li>
-								<li>
-									 <a href="#">4</a>
-								</li>
-								<li>
-									 <a href="#">5</a>
-								</li>
-								<li>
-									 <a href="#">>></a>
-								</li>
-							</ul>
+							<span id="spanFirst">第一页</span>   
+							<span id="spanPre">上一页</span>   
+							<span id="spanNext">下一页</span>   
+							<span id="spanLast">最后一页</span>   
+							第<span id="spanPageNum"></span>页/共<span id="spanTotalPage"></span>页 
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/adminEditor.js"></script>
+	<script>    
+// JavaScript Document By lishewen     
+     
+</script> 
+
 </body>
 </html>

@@ -17,7 +17,6 @@
 			<div class="top-right">
 				<ul>
 					<li><a href="login.html">登录</a></li>
-					<li><a href="register.html">注册</a></li>
 					<li><a href="#">退出</a></li>
 				</ul>
 			</div>
@@ -25,7 +24,7 @@
 		<!--head-->
 		<div class="head">
 			<div class="shouye">
-				<a href="index.html"><img src="images/home.png" alt="" width="22px" height="22px">首页</a>
+				<a href="admin_index.html"><img src="images/home.png" alt="" width="22px" height="22px">首页</a>
 			</div>
 			<div class="head-title">
 				<h3>足球裁判教学后台管理系统</h3>
@@ -40,7 +39,7 @@
 						<div class="panel-heading" >
 							 <a class="panel-title" data-toggle="collapse" data-parent="#panel-320451" href="#panel-element-78753" style="text-decoration: none;"><img src="images/password.png" alt="" width="18px" height="18px">管理员管理</a>
 						</div>
-						<div id="panel-element-78753" class="panel-collapse collapse in" >
+						<div id="panel-element-78753" class="panel-collapse collapse " >
 							<div class="panel-body">
 								<a href="admin_list.html">管理员管理</a>
 							</div>
@@ -59,7 +58,7 @@
 						<div class="panel-heading">
 							 <a class="panel-title" data-toggle="collapse" data-parent="#panel-320451" href="#panel-element-816153" style="text-decoration: none;"><img src="images/name.png" alt="" width="18px" height="18px">用户管理</a>
 						</div>
-						<div id="panel-element-816153" class="panel-collapse collapse">
+						<div id="panel-element-816153" class="panel-collapse collapse in">
 							<div class="panel-body">
 								<a href="user_list.html">用户管理</a>
 							</div>
@@ -134,23 +133,29 @@
 					</div>
 					<!--editInfo-->
 					<div class="col-md-12">
-						<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+						<form class="form-horizontal" role="form" action="user_edit.php"  target="sub" method="post" enctype="multipart/form-data">
 							<div class="form-group">
-								 <label for="inputUserName" class="col-md-2 control-label">用户名：</label>
+								 <label  class="col-md-2 control-label">ID：</label>
 								<div class="col-md-3">
-									<input type="text" class="form-control" id="inputUserName" />
+									<input type="num" class="form-control"  name="id" />
 								</div>
 							</div>
 							<div class="form-group">
-								 <label for="inputRealName" class="col-sm-2 control-label">真实姓名：</label>
-								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputRealName" />
+								 <label class="col-md-2 control-label">用户名：</label>
+								<div class="col-md-3">
+									<input type="text" class="form-control" name="username"  />
 								</div>
 							</div>
 							<div class="form-group">
-								 <label for="inputRealName" class="col-sm-2 control-label">手机号：</label>
+								 <label class="col-sm-2 control-label">真实姓名：</label>
 								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputTelphone" />
+									<input type="text" class="form-control" name="name" />
+								</div>
+							</div>
+							<div class="form-group">
+								 <label  class="col-sm-2 control-label">电子邮件：</label>
+								<div class="col-sm-3">
+									<input type="email" class="form-control" name="email"  />
 								</div>
 							</div>
 							
@@ -160,13 +165,14 @@
 								</div>
 							</div>
 						</form>
-						
+						<iframe src="" name="sub" width="0" height="0">
+        				</iframe>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/adminEditor.js"></script>
 </body>

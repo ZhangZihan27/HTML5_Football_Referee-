@@ -352,3 +352,9 @@ form input[type=radio]{
 	font-size: 14px;
 	color: #ed1c24;
 }
+
+#add_course{
+	display: none;
+	background-color: red;
+}
+
