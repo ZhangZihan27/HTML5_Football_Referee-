@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>美食管理</title>
+	<title>选择题管理</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/adminStyle.css">	
 </head>
@@ -16,7 +16,6 @@
 			<div class="top-right">
 				<ul>
 					<li><a href="login.html">登录</a></li>
-					<li><a href="register.html">注册</a></li>
 					<li><a href="#">退出</a></li>
 				</ul>
 			</div>
@@ -24,11 +23,10 @@
 		<!--head-->
 		<div class="head">
 			<div class="shouye">
-				<a href="index.html"><img src="images/home.png" alt="" width="22px" height="22px">首页</a>
+				<a href="admin_index.html"><img src="images/home.png" alt="" width="22px" height="22px">首页</a>
 			</div>
 			<div class="head-title">
-				<h3>爱尚西点后台管理系统</h3>
-				<p>manager</p>
+				<h3>足球裁判教学后台管理系统</h3>
 			</div>	
 		</div>
 		<!--content-->
@@ -40,7 +38,7 @@
 						<div class="panel-heading" >
 							 <a class="panel-title" data-toggle="collapse" data-parent="#panel-320451" href="#panel-element-78753" style="text-decoration: none;"><img src="images/password.png" alt="" width="18px" height="18px">管理员管理</a>
 						</div>
-						<div id="panel-element-78753" class="panel-collapse collapse in" >
+						<div id="panel-element-78753" class="panel-collapse collapse " >
 							<div class="panel-body">
 								<a href="admin_list.html">管理员管理</a>
 							</div>
@@ -85,7 +83,7 @@
 						<div class="panel-heading">
 							 <a class="panel-title" data-toggle="collapse" data-parent="#panel-320451" href="#panel-element-816155" style="text-decoration: none;color: #fff;"><img src="images/food.png" alt="" width="18px" height="18px">题库管理</a>
 						</div>
-						<div id="panel-element-816155" class="panel-collapse collapse">
+						<div id="panel-element-816155" class="panel-collapse collapse in">
 							<div class="panel-body">
 								<a href="question_option_list.html">选择</a>
 							</div>
@@ -130,7 +128,7 @@
 				<!--userList-->
 				<div class="col-md-12 userList">
 					<div class="col-md-12">
-						<h4>美食列表</h4>
+						<h4>选择题列表</h4>
 					</div>
 					<!--shop-->
 					<div class="col-md-12">
@@ -140,13 +138,13 @@
 									<th>发布者</th>
 									<th>名称</th>
 									<th>图片</th>
-									<th>食材</th>
+									<!-- <th>食材</th> -->
 									<th>发布时间</th>
 									<th>操作</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
+<!-- 								<tr>
 									<td>张三</td>
 									<td>法式面包</td>
 									<td><img src="images/shopList.png" alt="" width="70" height="38px"></td>
@@ -200,7 +198,7 @@
 										<a href="">修改</a>
 										<a href="">删除</a>
 									</td>
-								</tr>
+								</tr> -->
 								
 							</tbody>
 						</table>
@@ -235,7 +233,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/adminEditor.js"></script>
 </body>

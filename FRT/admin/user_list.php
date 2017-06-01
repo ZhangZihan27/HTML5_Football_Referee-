@@ -18,17 +18,17 @@ if($myDb){
 	//echo"数据库选择OK！<br>";
 }
 
+if(@$_AJAX['do']){
+	$a = @$_POST['id'];
+	mysql_query("DELETE FROM ftr_users WHERE userid='$a'");
+
+}
 //获取数据
 $result = mysql_query("SELECT * FROM ftr_users ");
-if($result){
-	//echo "获取表数据成功";
-}else{
-	//echo "shibai";
-}
 
 while ($row = mysql_fetch_array($result)) {
-	echo "<tr><td>".$row['username']."</td><td>".$row['name']."</td><td>".$row['email']."</td><td>".$row['date']."</td><td>
-	<a href="" >修改</a><a href="" >删除</a></td></tr>";
+	echo "<tr><td id='id'>".$row['userid']."</td><td>".$row['username']."</td><td>".$row['name']."</td><td>".$row['email']."</td><td>".$row['date']."</td><td>
+	<a href='' id='del' >删除</a></td></tr>";
 }
 
 mysql_close($con);

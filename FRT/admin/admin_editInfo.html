@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>修改个人信息</title>
+	<title>修改管理员个人信息</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/adminStyle.css">	
 	
@@ -17,7 +17,6 @@
 			<div class="top-right">
 				<ul>
 					<li><a href="login.html">登录</a></li>
-					<li><a href="register.html">注册</a></li>
 					<li><a href="#">退出</a></li>
 				</ul>
 			</div>
@@ -25,7 +24,7 @@
 		<!--head-->
 		<div class="head">
 			<div class="shouye">
-				<a href="index.html"><img src="images/home.png" alt="" width="22px" height="22px">首页</a>
+				<a href="admin_index.html"><img src="images/home.png" alt="" width="22px" height="22px">首页</a>
 			</div>
 			<div class="head-title">
 				<h3>足球裁判教学后台管理系统</h3>
@@ -134,23 +133,23 @@
 					</div>
 					<!--editInfo-->
 					<div class="col-md-12">
-						<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+						<form class="form-horizontal"  target="sub" role="form" action="admin_editInfo.php" method="post" enctype="multipart/form-data">
 							<div class="form-group">
 								 <label for="inputUserName" class="col-md-2 control-label">用户名：</label>
 								<div class="col-md-3">
-									<input type="text" class="form-control" id="inputUserName" />
+									<input type="text"  name="username" class="form-control" id="inputUserName" />
 								</div>
 							</div>
 							<div class="form-group">
 								 <label for="inputRealName" class="col-sm-2 control-label">真实姓名：</label>
 								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputRealName" />
+									<input type="text" name="name" class="form-control" id="inputRealName" />
 								</div>
 							</div>
 							<div class="form-group">
-								 <label for="inputRealName" class="col-sm-2 control-label">手机号：</label>
+								 <label for="inputRealName" class="col-sm-2 control-label">电子邮箱：</label>
 								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputTelphone" />
+									<input type="email" name="email" class="form-control" id="inputTelphone" />
 								</div>
 							</div>
 							
@@ -160,13 +159,14 @@
 								</div>
 							</div>
 						</form>
-						
+						<iframe src="" name="sub" width="0" height="0">
+        				</iframe>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/adminEditor.js"></script>
 </body>

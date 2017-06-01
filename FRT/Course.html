@@ -1,128 +1,192 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>无标题文档</title>
-<link href="css/bootstrap.css" rel="stylesheet" />
-<link rel="stylesheet" href="css/jquery-ui.css">
-<!-- <link rel="stylesheet" type="text/css" href="css/Academy.css">
- --><link rel="stylesheet" type="text/css" href="css/Course.css">
-<script src="js/jquery.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/dialog.js"></script>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<link href="css/bootstrap.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="css/style_course.css">
 
-<body>
-	
-	<div class="row clearfix header">
-		<div class="col-md-6 column">
-		<img src="images/logo.jpg" title="足球裁判教学系统" alt="足球裁判教学系统" >
-		<input type="text" value="搜索" id="input">	
-		<a href="" class="btn-search"><img src="images/search.png" ></a>
-		</div>
-		<div class="col-md-3 column">
-		<span>欢迎来到足球裁判教学系统~</span>
-		</div>
-		<div class="col-md-1 column myClass">
-		<a href="">我的课程</a>
-		</div>
-		<div class="col-md-1 column login">
-		<a id="login" >登录/注册</a>
-			<div id="myDialog" title="足球裁判教学系统">
-			<form action="admin/dialog.php" method="post" target="sub">
-				账号： <input type="text" name="username" required/><br>
-	            密码： <input type="password" name="password" required/><br>
-	            <input type="submit">
-			</form>  
-			<iframe src="" name="sub" width="0" height="0">
-			</iframe>                
-    		</div>
-		</div>
-		<div class="col-md-1 column">
-		</div>
-	</div>
-	<div class="row clearfix nav">
-		<div class="col-md-1 column">
-
-		</div>
-		<div class="col-md-10 column">
-				<div id="nav">	
-					<ul>
-						<li id="index">
-							 <a href="#">首页</a>
-						</li>
-						<li>
-							 <a href="Academy.html">足球学院</a>
-						</li>
-						<li>
-							 <a href="#">>运动训练课程</a>
-						</li>
-						<li>
-							 <a href="#">>技术</a>
-						</li>
-						<li>
-							 <a href="#">>足球停球教学</a>
-						</li>						
-					</ul>
-				</div>	
-		</div>
-		<div class="col-md-1 column">
-
-		</div>
-	</div>
-	
-	<div class="row clearfix content">
-		<div class="col-md-1 column">
-
-		</div>
-		<div class="col-md-10 column">
-		<div id="video"> 
-			<div id="video-left">
-			  <img src="./images/logo.jpg">
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/dialog.js"></script>
+		<title>足球裁判教学系统</title>
+	</head>
+	<body>
+		<!--
+        	作者：632018180@qq.com
+        	时间：2017-05-11
+        	描述：顶部
+        -->
+		<div class="g-warp">
+			<!--
+            	作者：632018180@qq.com
+            	时间：2017-05-11
+            	描述：top
+            -->
+			<div class="topnav rel">
+				<div class="header clear">
+					<span class="u-nav right">
+						<span class="wel-span li">欢迎来到足球裁判教学系统!~</span>
+						<a class="wel-span li" href="#">登录/注册</a>
+						<a class="wel-span li" href="#">我的课程</a>
+					</span>
+				</div>
 			</div>
-			<div id="video-right">
-				<h1>课程名称</h1>
-				<p>课程介绍。。。。。。。。。。。。。。。。。。。</p>
-				<button>分享</button>
-				<button>收藏</button>
+			<!--
+            	作者：632018180@qq.com
+            	时间：2017-05-11
+            	描述：logo search
+            -->
+			<div class="midnav rel">
+				<div class="containerStyle clear">
+					<a href="#">
+						<img src="images/logoB.png" class="logo left"></img>
+					</a>
+					<form>
+						<div class="search rel right">
+							<input id="getS" type="text" value="课程、试卷、资讯"/>
+							<input id="getB" type="submit" value="搜索"/>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!--
+            	作者：632018180@qq.com
+            	时间：2017-05-11
+            	描述：导航栏
+            -->
+			<div class="footnav rel">
+				<div class="main">
+					<div class="containerStyle clear">
+						<ul>
+							<li class="mainnav left rel liStyle">
+								 <a href="#">首页</a>
+							</li>
+							<li class="mainnav left rel liStyle">
+								 <a href="course.html">足球学院</a>
+							</li>
+							<li class="mainnav left rel liStyle">
+								 <a href="#">足球竞赛规则考试</a>
+							</li>
+							<li class="mainnav left rel liStyle">
+								 <a href="#">发现</a>
+							</li>
+							<li class="mainnav left rel liStyle">
+								 <a href="#">GOALSHOW</a>
+							</li>						
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div id="list">
-			<div id="list-left">
-				<h3>课程列表</h3>
-				<p>名称</p>
-				<ul>
-					<hr>
-					<li>名称1 <button>播放</button></li>
-					<li>名称2 <button>播放</button></li>
-					<li>名称3 <button>播放</button></li>
-					<li>名称4 <button>播放</button></li>
-					<li>名称5 <button>播放</button></li>
-					<li>名称6 <button>播放</button></li>
-					<li>名称7 <button>播放</button></li>
-					<li>名称8 <button>播放</button></li>
-					<hr>
-				</ul>
-			</div>
-			<div id="list-right">
-				<h3>讲师介绍</h3>
-				<img src="./images/logo.jpg">
-				<p>金牌讲师德莱文！！！</p>
-			</div>
-		</div>
-		</div>
-		<div class="col-md-1 column">
-
-		</div>
-	</div>
-	<div class="row clearfix footer">
-		<div class="col-md-12 column">
-		<p>
-		版权所有：河北师范大学软件学院GOAL项目小组<br>
-		技术支持：河北师范大学软件学院GOAL项目小组<br>郑重声明：未经授权禁止转载、摘编、复制或建立镜像。如有违反，追究法律责任！</p>
-		</div>
-	</div>
-
-</body>
+		
+		<!--
+        	作者：632018180@qq.com
+        	时间：2017-05-11
+        	描述：课程内容
+        -->
+        <div style="height: 800px;">
+            <!-- breadcrumb -->
+            <div class="crumb">
+                <ul>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">>足球学院</a></li>
+                    <li><a href="">>课程内容</a></li>
+                </ul>
+            </div>
+            <div class="courseContent">
+                <div class="courseImg">
+                    <img src="images/logo.png" >
+                </div>
+                <div class="courseSort">
+                    <h2>课程内容</h2>
+                    <p id="content">
+                      
+                    </p>
+                    <a class="joinCourse" href="">
+                        <span>
+                            立即查看
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="courseList">
+                <div class="contentList">
+                <h3>课程列表</h3>
+                <ul id="nameList">
+                    <!--  <li><a href=""><span style="color:red">红色</span><img src="images/search.png"></a></li> -->
+                    <!-- <li><a href=""><span id ="name2"></span><img src="images/search.png"></a></li>
+                    <li><a href=""><span id ="name3"></span><img src="images/search.png"></a></li>
+                    <li><a href=""><span id ="name4"></span><img src="images/search.png"></a></li>
+                    <li><a href=""><span id ="name5"></span><img src="images/search.png"></a></li>
+                    <li><a href=""><span id ="name6"></span><img src="images/search.png"></a></li>
+                    <li><a href=""><span id ="name7"></span><img src="images/search.png"></a></li>
+                    <li><a href=""><span id ="name8"></span><img src="images/search.png"></a></li>
+                    <li><a href=""><span id ="name9"></span><img src="images/search.png"></a></li>
+                    <li><a href=""><span id ="name10"></span><img src="images/search.png"></a></li> -->
+                </ul>
+               <!--  <ul>
+                    <li>上一页</li>
+                    <li>下一页</li>
+                </ul> -->
+                </div>
+                <div class="contentSort">
+                    <div class="author">
+                        <h1>金牌讲师</h1>
+                        <img src="images/author.jpg">
+                    </div>
+                    <div class="authorSort">
+                        <p id="sort">
+                        德莱文是有全图nuke技能和强力自我buff技能的ADCarry。德莱文的大招可以穿越全图造成大量AOE伤害，可以在对方准备回家时对他造成致命一击。德莱文可以在团战中造成大量持续输出，但他没有任何自保技能，非常容易被对方突进击杀。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+        	作者：632018180@qq.com
+        	时间：2017-05-16
+        	描述：footer
+        -->
+        <div class="footer">
+        	<div class="footerC">
+        		<span>
+        			©河北师范大学软件学院 GOAL小组
+        		</span>
+        	</div>
+        </div>
+	</body>
+    <script type="text/javascript">
+        var url = "admin/course.php";
+        $.get(url,function(data,status){
+             console.log(data);
+             var arr = data.split("!!!");
+             var name = new Array();
+             var sort = new Array();
+             var content = new Array();
+             var len = arr.length;
+             console.log(len);
+             var num = 0;
+             for(var i = 1;i<len;i++){
+                if(i%3 ==1){
+                     $("#nameList").append('<li><a href=""><span style="color:#999">'+arr[i-1]+'</span><img src="images/search.png"></a></li> ');
+                }
+                if(i%3 ==2){
+                     // var sort = "#sort"+i;
+                     // $(name).html(arr[1]);
+                }
+                if(i%3 ==0){
+                     // var content = "#content"+i;
+                     // $(name).html(arr[2]);
+                }            
+             }
+             $("#sort").html(arr[1]);
+             $("#content").html(arr[2]);
+            });
+    </script>
+    <script type="text/javascript">
+    //翻页
+    </script>
 </html>
