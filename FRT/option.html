@@ -5,10 +5,10 @@
 <title>无标题文档</title>
 <link href="css/bootstrap.css" rel="stylesheet" />
 <link rel="stylesheet" href="css/jquery-ui.css">
-<!-- <link rel="stylesheet" type="text/css" href="css/Academy.css">
- --><link rel="stylesheet" type="text/css" href="css/option.css">
- 	<link rel="stylesheet" type="text/css" href="css/style.css">
- 		<link rel="stylesheet" type="text/css" href="css/breadcrumb.css" />
+<link rel="stylesheet" type="text/css" href="css/option.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/breadcrumb.css" />
+<link rel="stylesheet" type="text/css" href="css/timeout.css" />
 <script src="js/jquery.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -94,7 +94,7 @@
 			
 		</div>
 		<div class="col-md-3 column">
-			<h4>1.标准的足球场地最窄的宽度是多少？</h4>
+			<h4 style="color: white;">1.标准的足球场地最窄的宽度是多少？</h4>
 			<div class="imgarea">
 				<img src="images/squre.png" >
 			</div>
@@ -110,6 +110,11 @@
 			</div>
 		</div>
 		<div class="col-md-5 column">
+			<div class="timeout">
+				<form action="#" method="post" name="agree">
+					<input type="submit" class="button" value="本题剩余作答时间 (30s)" id="agree_btn" name="agreeb">
+				</form>
+			</div>
 			<div class="btn1">
 				<button>提交</button>
 				<button>上一题</button>
@@ -143,6 +148,6 @@
         		</span>
         	</div>
         </div>
-
+<script src="js/timeout.js"></script>
 </body>
 </html>

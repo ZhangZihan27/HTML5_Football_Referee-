@@ -41,7 +41,7 @@ a:hover{
 	color: black;
 }
 .content{
-	background-color: #ebebeb;
+	background-color: #323232;
 }
 /*题目部分*/
 .body1{
@@ -82,13 +82,14 @@ h4{
 }
 /*content1部分*/
 .content1{
-	background-color: #ebebeb;
+	background-color: #323232;
 }
 .body2{
 	background-color: white;
 	height: 240px;
 	border-radius: 5px;
 	text-align: left;
+	margin-bottom: 30px;
 }
 .body2 h1{
 	margin-top: 20px;
@@ -103,8 +104,10 @@ h4{
 }
 .body2 p{
 	margin-top: 10px;
-	margin-left: 70px;
-	font-size: 15px;
+	margin-left: 20px;
+	font-size: 20px;
+	text-indent:2em;padding:0 3em;
+	font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
 }
 /*footer样式*/
 .footer{
