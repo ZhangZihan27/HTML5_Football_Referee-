@@ -116,9 +116,9 @@
 				</form>
 			</div>
 			<div class="btn1">
-				<button class="commit">提交</button>
+				<button class="commit" onclick="nextquestion()">提交</button>
 				<button class="lastqs">上一题</button>
-				<button class="nextqs">下一题</button>
+				<button class="nextqs" >下一题</button>
 				<button onclick="watchanswer()">查看答案</button>
 				<button class="intomistake">加入错题</button>
 			</div>	
@@ -131,7 +131,7 @@
 			<div class="body2">
 				<h3>正确答案：</h3>
 					<div class="answer">
-						<p><b>C</b></p>
+						<p class="answer1"><b>C</b></p>
 					</div>
 				<h3>答案解析：</h3>
 				<p></p>
@@ -152,6 +152,16 @@
 <script>
 	function watchanswer(){
 		$("p").show();
+	}
+	function nextquestion(){
+		var str = $(".answer1").text();
+		var answer = $('input:radio[name="football"]:checked').val();
+		if(str==answer){
+			window.location.href="option3.html";
+		}
+		else{
+			$("p").show();
+		}
 	}
 </script>
 </body>
