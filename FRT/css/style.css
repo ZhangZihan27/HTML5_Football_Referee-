@@ -1,5 +1,5 @@
 body{
-	text-align: center;
+	/*text-align: center;*/
 	font: 12px/1.14 "Arial","Hiragino Sans GB", \5b8b\4f53, "Georgia", "serif";
 	/*margin: 0 auto;*/
 }
@@ -10,6 +10,10 @@ a{
   margin: 0;
   padding: 0;
 }
+.body2 p{
+	display: none;
+}
+
 .f-a{
 	font-family: "Arial","Hiragino Sans GB","Microsoft YaHei", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
 	color: #fff;
@@ -139,11 +143,13 @@ a{
 	font-size: 16px;
 }
 .firstMain{
-	background-color: #f0f0f0;
 	padding-top: 48px;
+	height: auto;
 }
 .indedxCotainer{
+	/*background-color: #F0F0F0;*/
 	width: 1180px;
+	/*padding-top: 48px;*/
 	margin: 0 auto;
 }
 .indexColor1{
@@ -151,7 +157,6 @@ a{
 	margin-right: 20px;
 	width: 180px;
   	height: 315px;
-  	margin-bottom: 55px;
   	padding-top: 28px;
   	transition: .5s;
 }
@@ -181,18 +186,151 @@ a{
 	font-size: 20px;
 	font-weight: bolder;
 }
-.bigPic{
+.picBigA{
 	width: 380px;
   	margin-left: 0;
   	transition: .5s;
-  	margin-bottom: 21px;
   	min-height: 147px;
+  	margin-bottom: 21px;
   	display: block;
-  	text-decoration: none;
+  	float: left;
 }
+.picBigSpan{
+	height: 268px;
+	transition: .5s;
+  	background-color: #e6e6e6;
+  	overflow: hidden;
+  	display: block;
+  	/*position: relative;*/
+}
+.imgBig{
+	display: block;
+	width: 100%;
+	vertical-align: top;
+	-webkit-transition: 1.2s;
+  	transition: 1.2s;
+}
+.imgBig:hover{
+	-webkit-transform: scale(1.1);
+  	transform: scale(1.1);
+}
+.picDiv{
+	width: 980px;
+}
+.picDiv a{
+	text-decoration: none;
+}
+.picDiv a:hover{
+	color: #008000;
+}
+.picBigSpanF{
+	font-size: 16px;
+	height: 1.25em;
+  	overflow: hidden;
+  	margin-top: .65em;
+  	line-height: 1.25em;
+  	white-space: nowrap;
+  	text-overflow: ellipsis;
+  	transition: .25s;
+  	font-family: "Arial","Hiragino Sans GB","Microsoft YaHei", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+  	display: block;
+}
+.picBigSpanS{
+/*	margin-left: -10px;*/
+	margin-top: .35em;
+ 	white-space: nowrap;
+  	color: #999;
+  	display: block;
+}
+.picSmallA{
+	margin-left: 20px;
+	width: 180px;
+  	min-height: 147px;
+    margin-bottom: 21px;
+    display: block;
+    text-decoration: none;
+    
+}
+.picSmallSpan{
+	transition: .5s;
+  	background-color: #e6e6e6;
+  	height: 100px;
+  	overflow: hidden;
+  	display: block;
+  	position: relative;
+}
+.imgSmall{
+	display: block;
+	width: 100%;
+	vertical-align: top;
+	-webkit-transition: 1.2s;
+  	transition: 1.2s;
+}
+.imgSmall:hover{
+	-webkit-transform: scale(1.1);
+  	transform: scale(1.1);
+}
+.imgText{
+	display: block;
+	top: -23px;
+	font-size: 14px;
+	width: 100%;
+  	bottom: 0;
+  	padding: 0 .5em;
+  	line-height: 1.5em;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    position: relative;
+}
+.imgTextSmall{
+	font-size: 14px;
+	width: 100%;
+	background-color: rgba(0,0,0,0.6);
+	color: #fff;
+	line-height: 1.5em;
+	display: block;
+	bottom: 0;
+	padding: 0 .5em;
+	position: absolute; 
+}
+.picSmallSpanF {
+	height: 1.25em;
+  	overflow: hidden;
+  	margin-top: .65em;
+  	font-size: 14px;
+  	line-height: 1.25em;
+  	white-space: nowrap;
+  	text-overflow: ellipsis;
+  	transition: .25s;
+}
+.picSmallSpanS {
+	margin-top: .35em;
+  	white-space: nowrap;
+  	color: #999;
+  	display: block;
+}
+.footer{
+	border-top: 1px solid #ddd;
+  	background: #e6e6e6;
+  	padding: 20px 0;
+ 	text-align: center;
+}
+/* zhaosen*/
+.clearfix{clear: both;}
+.carousel-inner > .item>img,.carousel-inner > .item > a > img{display: inline-block;}
+.carousel-inner > .active{text-align: center;}
+.footerC span{
+	display: block;
+}
+/*zhaosen*/
+.main{
+	height: 100%;
+	background-color: #323232;
+}
+
 .breadO{
 	background: #f5f5f5;
-  	height: 56px;
+  	height: 83px;
   	z-index: 100;
   	position: relative;
 }
@@ -221,28 +359,216 @@ a{
 	font-family: 'icomoon';
   	speak: none;
 }
-.footer{
+/*.className{
+	font-size: 21px;
+  	line-height: 26px;
+  	color: #333;
+}*/
+.className span{
+	top: -10px;
+	max-width: 605px;
+	font-size: 24px;
+	font-weight: bold;
+  	line-height: 26px;
+  	position: relative;
+}
+.indexMain{
+	width: 100%;
+	height: auto;
+	background-color: #262a2d;
+	z-index: 99;
+  	padding: 25px 0;
+}
+.video{
+	width: 1180px;
+	margin: 0 auto;
+}
+.videoF{
+	min-height: 415px;
+  	background: #000;
+  	box-shadow: 0 0 20px #111;
+  	margin: 0 auto;
+  	position: relative;
+  	width: 860px;
+}
+.videoS{
+	position: relative;
+  	top: 0;
+  	width: 900px;
+  	height: 485px;
+  	min-height: 415px;
+  	z-index: 2;
+}
+iframe{
+	height: 485px;
+	width: 900px;
+}
+.jieshaoVideo{
+	clear: both;
+	background-color: #f0f0f0;
+	padding: 40px 0;
+}
+.containerVideo{
+	width: 1180px;
+	height: 200px;
+	margin: 0 auto;
+	background-color: white;
+	padding: 20px 20px;
+}
+.containerVideo a{
+	height: auto;
+	width: auto;
+}
+.containerVideo a img{
+	float: left;
+}
+.containerVideo h3{
+	margin: 0 10px;
+	position: relative;
+	left: 10px;
+	font-size: 25px;
+	font-weight: bolder;
+	color: #323232;
+	border-bottom: 1px;
+}
+.containerVideo p{
+	position: relative;
+	top: 10px;
+	left: 10px;
+	
+}
+.courseA{
+	padding: 20px;
+  	border-bottom: 2px solid #399466;
+  	background: #f4f4f4;
+  	height: 330px;
+  	width: 1180px;
+  	margin: 0px auto;
+}
+.courseA img{
+	float: left;
+	margin-right: 20px;
+}
+.courseT h2{
+	font-size: 27px;
+  	text-align: left;
+  	line-height: 33px;
+  	-webkit-margin-before: 0.1em;
+  	-webkit-margin-after: -0.1em;
+  	font-family: "Arial","Hiragino Sans GB","Microsoft YaHei", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+  	font-weight: normal;
+}
+.courseT p{
+	line-height: 23px;
+	margin: 0;
+}
+.blank{
+  	height: 15px;
+  	overflow: hidden;
+  	display: block;
+}
+.plybtn{
+	display: block;
+  	width: 140px;
+  	height: 55px;
+  	position: relative;
+  	margin-left: 1000px;
+  	margin-top: 60px;
+  	
+  	background: url(../images/play.png);
+}
+.plybtn:hover{
+	display: block;
+  	/*width: 140px;
+  	height: 55px;
+  	position: relative;
+  	padding-top:30px ;
+  	float: right;*/
+  	background: url(../images/playSelect.png);
+}
+.courseList{
+	clear: both;
+	width: 1180px;
+	height: 100%;
+	overflow: auto;
+	margin: 0 auto;
+	background-color: white;
+	padding: 20px 20px;
+	border-bottom: 2px solid #399466;
+}
+.courseListLeft{
+	float: left;
+  	width: 650px;
+}
+
+.courseTop h2{
+	font-size: 20px;
+  	width: 400px;
+  	float: left;
+  	font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+  	color: #444;
+  	font-weight: normal;
+  	padding: 15px -20px 15px 15px;
+}
+.courseDown{
+	width: 100%;
+	float: left;
 	border-top: 1px solid #ddd;
-  	background: #e6e6e6;
-  	padding: 20px 0;
- 	text-align: center;
+  	text-align: left;
+  	padding-bottom: 1em;
 }
-.timeout{
-	position: absolute;
-	top: 40%;
-	left: 21%;
+.CDown{
+	  margin-bottom: 10px;
 }
-.body2 p{
-	display: none;
+.CDown1{
+	height: 36px;
+  	line-height: 36px;
+  	cursor: pointer;
 }
-.btn1 button{
-	text-shadow: 1px 1px 1px rgba(255,255,255, .11);
-
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-
-	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0, 1), inset 1px 1px 1px rgba(255,255,255, 0);
-	-moz-box-shadow: 1px 1px 1px rgba(0,0,0, 1), inset 1px 1px 1px rgba(255,255,255, 0);
-	box-shadow: 1px 1px 1px rgba(0,0,0, 1), inset 1px 1px 1px rgba(255,255,255, 0);
+.CDown1:hover{
+	background-color: rgb(226,250,221);
+}
+.CD1Span0{
+	width: 62px;
+  	color: #999;
+  	text-align: left;
+  	font-size: 14px;
+  	float: left;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	white-space: nowrap;
+  	font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+}
+.CD1Span1{
+	width: 450px;
+  	padding-left: 6px;
+  	color: #333;
+  	height: 36px;
+  	float: left;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	white-space: nowrap;
+  	font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+  	
+}
+.CD1Span2{
+	font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+  	font-size: 14px;
+  	color: #444;
+  	float: right;
+}
+.teacherDown{
+	margin-top: 10px;
+	width: 100%;
+	border-top: 1px solid #ddd;
+  	text-align: left;
+  	padding-bottom: 1em;
+}
+.teacherDown p{
+	width: 350px;
+	overflow: hidden;
+}
+.courseListRight{
+	float: right;
+	width: auto;
 }

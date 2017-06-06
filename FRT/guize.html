@@ -9,6 +9,7 @@
 		<script src="js/jquery-ui.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/dialog.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<script type="text/javascript">
 			$(function(){
 				$(document).ready(function()
@@ -55,9 +56,8 @@
  			var list = document.getElementById("list"+id);
  			var menu = document.getElementById("menu"+id)
  			if (list.style.display=="none") {
-
-  			document.getElementById("list"+id).style.display="block";
- 			 menu.className = "title1";
+ 				 	document.getElementById("list"+id).style.display='block';
+ 			 		menu.className = "title1";
  			 		if(id==1){
  			 			document.getElementById("list2").style.display="none";
   						menu.className = "title";
@@ -76,16 +76,22 @@
   						document.getElementById("list2").style.display="none";
   						menu.className = "title";
  			 		}
+ 				}else {
+  					document.getElementById("list"+id).style.display="none";
+  					menu.className = "title";
  				}
 			} 
 		</script>
 <style type="text/css">
 <!--
 *{margin:0;padding:0;list-style:none}
-#nav{margin:10px 0px 0px 110px;text-align:center;line-height:40px;width:150px;}
+#nav{margin:0px 0px 0px 110px;text-align:center;line-height:40px;width:150px;}
 .title{background:#008000;color:#fff;border-bottom:1px solid #fff;cursor:pointer;font-size: 20px; font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";}
 .title1{background:#888;color:#000;border-bottom:1px solid #666;cursor:pointer;}
 .content li{color:#336699;background:#5cc151;border-bottom:1px solid #fff;font-size: 18px;font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";}
+.content ul{
+	margin-bottom: 0px;
+}
 -->
 </style>
 		<title>足球裁判教学系统</title>
@@ -106,7 +112,8 @@
 				<div class="header clear">
 					<span class="u-nav right">
 						<span class="wel-span li">欢迎来到足球裁判教学系统!~</span>
-						<a class="wel-span li" href="#">登录/注册</a>
+						<a class="wel-span li" href="#">登录</a>
+						<a class="wel-span li" href="#">注册</a>
 						<a class="wel-span li" href="#">我的课程</a>
 					</span>
 				</div>
@@ -139,13 +146,13 @@
 					<div class="containerStyle clear">
 						<ul>
 							<li class="mainnav left rel liStyle">
-								 <a href="#">首页</a>
+								 <a href="index.html">首页</a>
 							</li>
 							<li class="mainnav left rel liStyle">
-								 <a href="#">足球学院</a>
+								 <a href="Academy.html">足球学院</a>
 							</li>
 							<li class="mainnav left rel liStyle">
-								 <a href="#">足球竞赛规则考试</a>
+								 <a href="guize.html">足球竞赛规则考试</a>
 							</li>
 							<li class="mainnav left rel liStyle">
 								 <a href="#">发现</a>
@@ -155,6 +162,16 @@
 							</li>						
 						</ul>
 					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="breadO" style="height: 50px;">
+			<div class="breadNav">
+				<div class="breadL">
+					<p class="bread">
+						<a>首页</a><span> > </span><a>足球竞赛规则考试</a>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -191,7 +208,7 @@
 
         <div class="right1 ">
         	<div id="1">
-        		<h3>我的试卷</h3>
+        		<h2>我的试卷</h2>
           		<p class="real">我的试卷，请选择以下列表中我需要参加的考试</p>
           		<div class="tm_searchbox">
           			<form action="" method="post">
@@ -243,7 +260,7 @@
         	<div class="tm_main">
         		<div class="tm_container">
         				<div class="tm_navtitle">
-							<h1>历史考试</h1>
+							<h2>历史考试</h2>
                 			<span>我的试卷，请选择以下列表中我需要参加的考试。</span>
             			</div>
         		</div>
@@ -290,7 +307,7 @@
 						<td><span class="tm_label">20</span></td>
 						<td><span class="tm_label">12</span></td>
 						<td>admin2<br/>2017-05-18 21:24:03</td>
-                        <td><a href="javascript:void(0)" onclick="javascript:tm.startExam(this,'3aa906f0-9e4b-4763-9320-e8d7c5a64e3a');">开始考试</a></td>
+                        <td><a href="option1.html" onclick="javascript:tm.startExam(this,'3aa906f0-9e4b-4763-9320-e8d7c5a64e3a');">开始考试</a></td>
                     </tr>
                 	<tr>
 						<td>足球运动</td>
@@ -302,7 +319,7 @@
 						<td><span class="tm_label">141</span></td>
 						<td><span class="tm_label">85</span></td>
 						<td>admin3<br/>2017-04-17 14:29:17</td>
-                        <td><a href="javascript:void(0)" onclick="javascript:tm.startExam(this,'b7f76651-4bbf-4b07-bccc-d150fc71db2e');">开始考试</a></td>
+                        <td><a href="option1.html" onclick="javascript:tm.startExam(this,'b7f76651-4bbf-4b07-bccc-d150fc71db2e');">开始考试</a></td>
                     </tr>	
                 	<tr>
 						<td>凯美特财务轮训考试</td>
@@ -314,7 +331,7 @@
 						<td><span class="tm_label">150</span></td>
 						<td><span class="tm_label">90</span></td>
 						<td>admin2<br/>2017-04-01 23:05:42</td>
-                        <td><a href="javascript:void(0)" onclick="javascript:tm.startExam(this,'c68d0b89-2515-40d8-8d5e-19717c12c471');">开始考试</a></td>
+                        <td><a href="option1.html" onclick="javascript:tm.startExam(this,'c68d0b89-2515-40d8-8d5e-19717c12c471');">开始考试</a></td>
                     </tr>
                 	<tr>
 						<td>凯美特财务轮训考试</td>
@@ -334,7 +351,7 @@
 			<table width="100%" cellpadding="10" border="0" class="tm_table_list">
 				<tfoot>
 					<tr>
-						<td><div class="tm_pager_foot"><a href="#">首页</a>&nbsp; <a href="#">上一页</a>&nbsp; <a href="#">下一页</a>&nbsp; <a href="#">尾页</a>&nbsp; &nbsp;共4条记录 &nbsp;  <input type="text" size="1" maxlength="3" class="tm_txt" value="1" onkeyup="tm_fn_page_to(event,'http://demo.tomexam.com/user/paper/list.thtml?',this.value)"  />  /1 页&nbsp; 每页显示 <select id="tm_pager_pagesize" class="tm_select" onchange="tm_fn_pagesize('http://demo.tomexam.com/user/paper/list.thtml?',this.value)"><option value="10" selected>10</option><option value="20" >20</option><option value="50" >50</option><option value="100" >100</option></select> 条</div></td>
+						<td><div class="tm_pager_foot"><a href="index.html">首页</a>&nbsp; <a href="#">上一页</a>&nbsp; <a href="#">下一页</a>&nbsp; <a href="#">尾页</a>&nbsp; &nbsp;共4条记录 &nbsp;  <input type="text" size="1" maxlength="3" class="tm_txt" value="1" onkeyup="tm_fn_page_to(event,'http://demo.tomexam.com/user/paper/list.thtml?',this.value)"  />  /1 页&nbsp; 每页显示 <select id="tm_pager_pagesize" class="tm_select" onchange="tm_fn_pagesize('http://demo.tomexam.com/user/paper/list.thtml?',this.value)"><option value="10" selected>10</option><option value="20" >20</option><option value="50" >50</option><option value="100" >100</option></select> 条</div></td>
 					</tr>
 				</tfoot>
 			</table>
@@ -368,7 +385,7 @@
 					<input type="radio" name="timu1" value="tuozhan">拓展题
 					</div>
 					<div class="border2">
-						<button type="button"><a href="#">组成试卷</a></button>
+						<button type="button"><a href="option1.html">组成试卷</a></button>
 					</div>
     			</div>
     		</div>
@@ -377,7 +394,7 @@
         		<div class="tm_main">
         			<div class="tm_container">
         				<div class="tm_navtitle">
-							<h1>检测记录</h1>
+							<h2>检测记录</h2>
                 			<span>我的试卷，请选择以下列表中我需要参加的考试。</span>
             			</div>
         			</div>
@@ -425,7 +442,7 @@
 						<td><span class="tm_label">20</span></td>
 						<td><span class="tm_label">12</span></td>
 						<td>admin2<br/>2017-05-18 21:24:03</td>
-                        <td><a href="javascript:void(0)" onclick="javascript:tm.startExam(this,'3aa906f0-9e4b-4763-9320-e8d7c5a64e3a');">开始考试</a></td>
+                        <td><a href="panduan.html" onclick="javascript:tm.startExam(this,'3aa906f0-9e4b-4763-9320-e8d7c5a64e3a');">开始考试</a></td>
                     </tr>
                 	<tr>
 						<td>的试卷啊啊啊啊啊</td>
@@ -437,7 +454,7 @@
 						<td><span class="tm_label">141</span></td>
 						<td><span class="tm_label">85</span></td>
 						<td>admin3<br/>2017-04-17 14:29:17</td>
-                        <td><a href="javascript:void(0)" onclick="javascript:tm.startExam(this,'b7f76651-4bbf-4b07-bccc-d150fc71db2e');">开始考试</a></td>
+                        <td><a href="panduan.html" onclick="javascript:tm.startExam(this,'b7f76651-4bbf-4b07-bccc-d150fc71db2e');">开始考试</a></td>
                     </tr>	
                 	<tr>
 						<td>凯美特财务轮训考试</td>
@@ -449,7 +466,7 @@
 						<td><span class="tm_label">150</span></td>
 						<td><span class="tm_label">90</span></td>
 						<td>admin2<br/>2017-04-01 23:05:42</td>
-                        <td><a href="javascript:void(0)" onclick="javascript:tm.startExam(this,'c68d0b89-2515-40d8-8d5e-19717c12c471');">开始考试</a></td>
+                        <td><a href="panduan.html" onclick="javascript:tm.startExam(this,'c68d0b89-2515-40d8-8d5e-19717c12c471');">开始考试</a></td>
                     </tr>
                 		<tr>
 							<td>凯美特财务轮训考试</td>
@@ -469,7 +486,7 @@
 					<table width="100%" cellpadding="10" border="0" class="tm_table_list">
 						<tfoot>
 							<tr>
-								<td><div class="tm_pager_foot"><a href="#">首页</a>&nbsp; <a href="#">上一页</a>&nbsp; <a href="#">下一页</a>&nbsp; <a href="#">尾页</a>&nbsp; &nbsp;共4条记录 &nbsp;  <input type="text" size="1" maxlength="3" class="tm_txt" value="1" onkeyup="tm_fn_page_to(event,'http://demo.tomexam.com/user/paper/list.thtml?',this.value)"  />  /1 页&nbsp; 每页显示 <select id="tm_pager_pagesize" class="tm_select" onchange="tm_fn_pagesize('http://demo.tomexam.com/user/paper/list.thtml?',this.value)"><option value="10" selected>10</option><option value="20" >20</option><option value="50" >50</option><option value="100" >100</option></select> 条</div></td>
+								<td><div class="tm_pager_foot"><a href="index.html">首页</a>&nbsp; <a href="#">上一页</a>&nbsp; <a href="#">下一页</a>&nbsp; <a href="#">尾页</a>&nbsp; &nbsp;共4条记录 &nbsp;  <input type="text" size="1" maxlength="3" class="tm_txt" value="1" onkeyup="tm_fn_page_to(event,'http://demo.tomexam.com/user/paper/list.thtml?',this.value)"  />  /1 页&nbsp; 每页显示 <select id="tm_pager_pagesize" class="tm_select" onchange="tm_fn_pagesize('http://demo.tomexam.com/user/paper/list.thtml?',this.value)"><option value="10" selected>10</option><option value="20" >20</option><option value="50" >50</option><option value="100" >100</option></select> 条</div></td>
 							</tr>
 						</tfoot>
 					</table>
@@ -477,18 +494,21 @@
 				</div>
     		</div>
 		</div>
-		<div class="footer">
-            <div class="footerC">
-                <span>
-                    ©河北师范大学软件学院 GOAL小组
+		<div class="footer clearfix">
+        	<div class="footerC">
+        		<span>
+                    版权所有：河北师范大学软件学院 GOAL小组
                 </span>
                 <span>
-                    ©河北师范大学软件学院 GOAL小组
+                    本站内容不得转载，违者必究
                 </span>
                 <span>
-                    ©河北师范大学软件学院 GOAL小组
+                    联系地址：河北省石家庄市南二环东路20号&nbsp;&nbsp;&nbsp;&nbsp;邮编：050024
                 </span>
-            </div>
+                <span>
+                    感谢河北师范大学软件学院各位老师指导
+                </span>
+        	</div>
         </div>
 	</body>
 </html>
